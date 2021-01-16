@@ -27,6 +27,11 @@ class Xylophone extends StatefulWidget {
 }
 
 class _XylophoneState extends State<Xylophone> {
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,73 +40,66 @@ class _XylophoneState extends State<Xylophone> {
         children: [
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note1.wav');
+              playSound(1);
             },
             child: Text(
               'Button 1',
             ),
-            color: Colors.blue,
+            color: Colors.red,
           ),
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note2.wav');
+              playSound(2);
             },
             child: Text(
               'Button 2',
             ),
-            color: Colors.blue,
+            color: Colors.orange,
           ),
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note3.wav');
+              playSound(3);
             },
             child: Text(
               'Button 3',
             ),
-            color: Colors.blue,
+            color: Colors.yellow,
           ),
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note4.wav');
+              playSound(4);
             },
             child: Text(
               'Button 4',
             ),
-            color: Colors.blue,
+            color: Colors.green,
           ),
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note5.wav');
+              playSound(5);
             },
             child: Text(
               'Button 5',
             ),
-            color: Colors.blue,
+            color: Colors.green.shade900,
           ),
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note6.wav');
+              playSound(6);
             },
             child: Text(
               'Button 6',
             ),
-            color: Colors.blue,
+            color: Colors.blue.shade900,
           ),
           FlatButton(
             onPressed: () {
-              final player = AudioCache();
-              player.play('note7.wav');
+              playSound(7);
             },
             child: Text(
               'Button 7',
             ),
-            color: Colors.blue,
+            color: Colors.purple,
           ),
         ],
       ),
